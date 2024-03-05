@@ -25,15 +25,18 @@ namespace todoASPMVC.Controllers
 
         }
 
-        [HttpPost]
+        
         public ActionResult Login(Utilisateur utilisateur)
         {
             if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
-                return Content(utilisateur.NomUtilisateur);
-            }else
-            {
                 
+                
+                return RedirectToRoute("Dashboard");
+                //return Content(utilisateur.NomUtilisateur);
+            }
+            else
+            {
                 return View();
             }
                 
@@ -46,20 +49,23 @@ namespace todoASPMVC.Controllers
         {
             return View();
         }
-        [HttpPost]
+        [HttpPost]        
+        
         public ActionResult CreationCompte(Utilisateur utilisateur)
         {
 
-            if (utilisateur.ToString() != "")
+            //return Content(utilisateur.NomUtilisateur);
+            if (utilisateur.NomUtilisateur != null)
             {
                 DBConnection.CreationCompte(utilisateur);
-
-                return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
+                return RedirectToAction("Login/Login");
+                //return RedirectToRoute("Dashboard");
+                //return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
             }
             else
             {
                 return Content("error");
-            }            
+            }
         }
     }
 }
