@@ -84,3 +84,26 @@ C:\Users\inclu\source\repos\todoASPMVC\obj\Debug\todoASPMVC.csproj.CoreCompileIn
 C:\Users\inclu\source\repos\todoASPMVC\obj\Debug\todoASPMVC.csproj.Up2Date
 C:\Users\inclu\source\repos\todoASPMVC\obj\Debug\todoASPMVC.dll
 C:\Users\inclu\source\repos\todoASPMVC\obj\Debug\todoASPMVC.pdb
+<<<<<<< HEAD
+=======
+C:\Users\inclu\source\repos\todoASPMVC\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\Npgsql.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Buffers.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Memory.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Numerics.Vectors.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Text.Encodings.Web.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Text.Json.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.ValueTuple.dll
+C:\Users\inclu\source\repos\todoASPMVC\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\Npgsql.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Buffers.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Memory.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Numerics.Vectors.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Text.Encodings.Web.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Text.Json.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\inclu\source\repos\todoASPMVC\bin\System.ValueTuple.xml
+>>>>>>> dev
