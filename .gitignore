@@ -1,0 +1,20 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+/bin/roslyn/Microsoft.CodeAnalysis.dll
+/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+/bin/roslyn/System.Collections.Immutable.dll
+/bin/roslyn/System.IO.FileSystem.dll
+/bin/roslyn/System.IO.FileSystem.Primitives.dll
+/bin/roslyn/System.Reflection.Metadata.dll
+/bin/roslyn/System.Security.Cryptography.Primitives.dll
+/bin/roslyn/System.ValueTuple.dll
+/bin/roslyn/VBCSCompiler.exe
+/.vs/todoASPMVC/config
+/.vs/todoASPMVC/v17
+/bin
+/.vs/todoASPMVC/FileContentIndex
+/Views/Login
