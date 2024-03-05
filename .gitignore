@@ -5,3 +5,7 @@
 /.vs/todoASPMVC/config/applicationhost.config
 /.vs/tpASPNETMVC/v17
 /.vs/todoASPMVC/FileContentIndex/06316c06-d43f-446c-ae2f-fc706a360fbb.vsidx
+*.json
+/.vs/todoASPMVC/FileContentIndex/e325b70c-12ca-4bdd-8bb1-4fc68e62fc22.vsidx
+/.vs/tpASPNETMVC1/v17/.wsuo
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
