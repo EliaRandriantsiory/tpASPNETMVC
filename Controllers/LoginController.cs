@@ -9,6 +9,7 @@ namespace todoASPMVC.Controllers
 {
     public class LoginController : Controller
     {
+
         // GET: Login
         public ActionResult Index()
         {
@@ -27,8 +28,15 @@ namespace todoASPMVC.Controllers
         [HttpPost]
         public ActionResult Login(Utilisateur utilisateur)
         {
-            //if (DBConnection.AuthentificationUtilisateur(utilisateur) != null)
-            return Content(utilisateur.NomUtilisateur);
+            if (DBConnection.AuthentificationUtilisateur(utilisateur))
+            {
+                return Content(utilisateur.NomUtilisateur);
+            }else
+            {
+                
+                return View();
+            }
+                
             //return View();
 
         }
@@ -41,17 +49,17 @@ namespace todoASPMVC.Controllers
         [HttpPost]
         public ActionResult CreationCompte(Utilisateur utilisateur)
         {
-            return Content(utilisateur.NomUtilisateur);
-            //if (utilisateur != null)
-            //{
-            //    DBConnection.CreationCompte(utilisateur);
 
-            //    return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
-            //}
-            //else
-            //{
-            //    return Content("error");
-            //}
+            if (utilisateur.ToString() != "")
+            {
+                DBConnection.CreationCompte(utilisateur);
+
+                return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
+            }
+            else
+            {
+                return Content("error");
+            }            
         }
     }
 }

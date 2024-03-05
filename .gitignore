@@ -19,4 +19,6 @@
 /.vs/todoASPMVC/FileContentIndex
 /Views/Login
 /obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-*.sqlite
+/obj/Debug/todoASPMVC.csproj.FileListAbsolute.txt
+/obj/Debug/todoASPMVC.dll
+/obj/Debug/todoASPMVC.csproj.AssemblyReference.cache
