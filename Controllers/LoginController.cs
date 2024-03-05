@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using todoASPMVC.Models;
 
 namespace todoASPMVC.Controllers
 {
@@ -13,13 +14,24 @@ namespace todoASPMVC.Controllers
         {
             return View();
         }
-        public ActionResult Login()
+        public ActionResult Login(Utilisateur utilisateur)
         {
+            //if (DBConnection.AuthentificationUtilisateur(utilisateur) != null)
             return View();
+
         }
-        public ActionResult CreationCompte()
+        public ActionResult CreationCompte(Utilisateur utilisateur)
         {
-            return View();
+            if (utilisateur != null)
+            {
+                DBConnection.CreationCompte(utilisateur);
+
+                return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
+            }
+            else
+            {
+                return Content("error");
+            }
         }
     }
 }
