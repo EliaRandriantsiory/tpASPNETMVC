@@ -15,7 +15,7 @@ namespace todoASPMVC.Models
         public static List<Taches> retrouverTaches(string nomUtilisateur)
         { 
             req = $"SELECT * FROM public.\"Taches\" WHERE nomutilisateur = '{nomUtilisateur}'";
-            taches = new List<Taches>;
+            taches = new List<Taches>();
 
             connectionString.Open();
 
