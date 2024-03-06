@@ -30,8 +30,6 @@ namespace todoASPMVC.Controllers
         {
             if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
-                
-                
                 return RedirectToRoute("Dashboard");
                 //return Content(utilisateur.NomUtilisateur);
             }
