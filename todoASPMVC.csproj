@@ -158,6 +158,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DbConnection.cs" />
+    <Compile Include="Models\DbConnectionRD.cs" />
+    <Compile Include="Models\DCConnectionCUs.cs" />
     <Compile Include="Models\Taches.cs" />
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
