@@ -194,3 +194,7 @@ C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.csproj.AssemblyRef
 C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
 C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.dll
 C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.pdb
+C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.AssemblyReference.cache
+C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
+C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.dll
+C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
