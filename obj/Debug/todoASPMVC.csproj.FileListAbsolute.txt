@@ -190,3 +190,7 @@ C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.C
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CopyComplete
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC\obj\Debug\todoASPMVC.dll
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
+C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.csproj.AssemblyReference.cache
+C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
+C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.dll
+C:\Users\inclu\source\repos\tpASPNETMVC1\obj\Debug\todoASPMVC.pdb
