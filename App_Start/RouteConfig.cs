@@ -19,6 +19,10 @@ namespace todoASPMVC
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+                name: "Home",
+                url: "Home/Index"
+                );
+            routes.MapRoute(
                 name:"Dashboard",
                 url: "Taches/ViewTaches"
                 );
