@@ -159,7 +159,7 @@
     </Compile>
     <Compile Include="Models\DbConnection.cs" />
     <Compile Include="Models\DbConnectionRD.cs" />
-    <Compile Include="Models\DCConnectionCUs.cs" />
+    <Compile Include="Models\DbConnectionCU.cs" />
     <Compile Include="Models\Taches.cs" />
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,6 +218,9 @@
     <Content Include="Views\Login\CreationCompte.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Taches\ViewTaches.cshtml" />
+    <Content Include="Views\Taches\CreateTache.cshtml" />
+    <Content Include="Views\Taches\UpdateTache.cshtml" />
+    <Content Include="Views\Taches\DeleteTache.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

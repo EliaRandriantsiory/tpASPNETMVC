@@ -18,9 +18,8 @@
 /bin
 /.vs/todoASPMVC/FileContentIndex
 /Views/Login
-/obj/Debug
+/obj/Debug/
 /obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-<<<<<<< HEAD
 /obj/Debug/todoASPMVC.csproj.FileListAbsolute.txt
 /obj/Debug/todoASPMVC.dll
 /obj/Debug/todoASPMVC.csproj.AssemblyReference.cache

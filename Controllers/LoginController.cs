@@ -22,7 +22,6 @@ namespace todoASPMVC.Controllers
             //if (DBConnection.AuthentificationUtilisateur(utilisateur) != null)
 
             return View();
-
         }
 
         
@@ -30,6 +29,7 @@ namespace todoASPMVC.Controllers
         {
             if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
+                Session["nomUtilisateur"] = utilisateur.NomUtilisateur;
                 return RedirectToRoute("Dashboard");
                 //return Content(utilisateur.NomUtilisateur);
             }
