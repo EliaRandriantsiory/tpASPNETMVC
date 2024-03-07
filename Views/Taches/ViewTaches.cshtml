@@ -1,0 +1,110 @@
+﻿@model IEnumerable<todoASPMVC.Models.Taches>
+
+@{
+    ViewBag.Title = "ViewTaches";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewTaches</h2>
+
+<p>
+    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create New
+    </button>
+
+</p>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">INSCRIPTION A LA PLATEFORME</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm(""))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>Taches</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                            <label>Ajout tache</label>
+                            <div class="col-md-10">
+                            <input type="text" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <div class="col-md-10">
+                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>+
+   
+ <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NomUtilisateur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomTache)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Statut)
+            </th>
+            <th hidden>
+                @Html.DisplayNameFor(model => model.IdTache)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomUtilisateur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomTache)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Statut)
+                </td>
+                <td hidden>
+                    @Html.DisplayFor(modelItem => item.IdTache)
+                </td>
+                <td>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Modifier
+                    </button>
+                    <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Supprimer
+                    </button>
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
