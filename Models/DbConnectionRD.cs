@@ -10,11 +10,11 @@ namespace todoASPMVC.Models
     public class DbConnectionRD
     {
 
-        public static NpgsqlConnection connectionString = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["TPASPNet"].ConnectionString);
+        public static NpgsqlConnection connectionString = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["TodoDbConnection"].ConnectionString);
 
         public static List<Taches> retrouverTaches(string nomUtilisateur)
         {
-            var req = $"SELECT * FROM public.\"Taches\" WHERE nomutilisateur = '{nomUtilisateur}'";
+            var req = $"SELECT * FROM public.\"taches\" WHERE nomutilisateur = '{nomUtilisateur}'";
             var taches = new List<Taches>();
 
             connectionString.Open();

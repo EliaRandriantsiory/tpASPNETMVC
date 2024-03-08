@@ -23,13 +23,39 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("S'authentifier", "Login", "Login", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-            </div>
+            
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (Session["nomUtilisateur"] != null)
+                        {
+                            <li>@Html.ActionLink("Se déconnecter", "Logout", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        @if (Session["nomUtilisateur"] == null)
+                        {
+                            <li>@Html.ActionLink("S'authentifier", "Login", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+
+
+                    </ul>
+                </div>
+            
+
+
+
+    
+            @using (Html.BeginForm("ActionPost", "Taches", FormMethod.Post))
+            {<div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+    <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+        <div class="navbar-nav flex-grow-1">
+            <label id="currentUser" name="utilisateurCourant">@Session["nomUtilisateur"]</label>
+            <input type="submit" id="btnAuth" name="btnAuth" class="btn btn-default" />
         </div>
-    </nav>
+    </div>
+</div>
+                    }
+                </div>
+
+</nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
