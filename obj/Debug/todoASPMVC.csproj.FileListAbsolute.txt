@@ -198,7 +198,6 @@ C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.AssemblyReference.
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.dll
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
-C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.dll.config
 C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.pdb
 C:\Users\inclu\source\tpASPNETMVC\bin\roslyn\csc.exe
