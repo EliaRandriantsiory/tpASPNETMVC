@@ -9,6 +9,7 @@ namespace todoASPMVC.Controllers
 {
     public class LoginController : Controller
     {
+
         // GET: Login
         public ActionResult Index()
         {
@@ -18,26 +19,33 @@ namespace todoASPMVC.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            //if (DBConnection.AuthentificationUtilisateur(utilisateur) != null)
-
             return View();
-
         }
-
         [HttpPost]
         public ActionResult Login(Utilisateur utilisateur)
         {
+
+            utilisateur.MotDePasse = Request.Form["motDePasseLogin"];
+
             if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
-                return Content(utilisateur.NomUtilisateur);
-            }else
+                Session["nomUtilisateur"] = utilisateur.NomUtilisateur;
+                return RedirectToRoute("Dashboard");
+                //return Content(utilisateur.NomUtilisateur);
+            }
+            else
             {
-                
                 return View();
             }
-                
-            //return View();
 
+            //return Content($"utilisateur:{utilisateur.NomUtilisateur}\nmot de passe{utilisateur.MotDePasse}");
+
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToRoute("Home");
         }
 
         [HttpGet]
@@ -45,20 +53,23 @@ namespace todoASPMVC.Controllers
         {
             return View();
         }
-        [HttpPost]
+        [HttpPost]        
+        
         public ActionResult CreationCompte(Utilisateur utilisateur)
         {
 
-            if (utilisateur.ToString() != "")
+            //return Content(utilisateur.NomUtilisateur);
+            if (utilisateur.NomUtilisateur != null)
             {
                 DBConnection.CreationCompte(utilisateur);
-
-                return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
+                return RedirectToAction("Login/Login");
+                //return RedirectToRoute("Dashboard");
+                //return Content($"inscription '{utilisateur.NomUtilisateur}', mot de passe '{utilisateur.MotDePasse}' réussi");
             }
             else
             {
                 return Content("error");
-            }            
+            }
         }
     }
 }

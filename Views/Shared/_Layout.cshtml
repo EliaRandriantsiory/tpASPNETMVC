@@ -4,27 +4,58 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    <title>@ViewBag.Title - Mon ToDo ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Mon ToDo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Activer/désactiver la navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
+                <ul class="navbar-nav flex-grow-0">
                     <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("À propos de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
+            
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (Session["nomUtilisateur"] != null)
+                        {
+                            <li>@Html.ActionLink("Se déconnecter", "Logout", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        @if (Session["nomUtilisateur"] == null)
+                        {
+                            <li>@Html.ActionLink("S'authentifier", "Login", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+
+
+                    </ul>
+                </div>
+            
+
+
+
+    
+            @using (Html.BeginForm("ActionPost", "Taches", FormMethod.Post))
+            {<div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+    <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+        <div class="navbar-nav flex-grow-1">
+            <label id="currentUser" name="utilisateurCourant">@Session["nomUtilisateur"]</label>
+            <input type="submit" id="btnAuth" name="btnAuth" class="btn btn-default" />
         </div>
-    </nav>
+    </div>
+</div>
+                    }
+                </div>
+
+</nav>
     <div class="container body-content">
         @RenderBody()
         <hr />

@@ -44,18 +44,14 @@ namespace todoASPMVC.Models
         }
         public static void CreationCompte(Utilisateur utilisateur)
         {
-            var req = $"INSERT INTO utilisateur(nomutilisateur, motdepasse) VALUES ('{utilisateur.NomUtilisateur}','{utilisateur.MotDePasse}');";
-
+            var req = $"INSERT INTO utilisateur (nomutilisateur, motdepasse) VALUES ('{utilisateur.NomUtilisateur}','{utilisateur.MotDePasse}');";
+            //var req = "INSERT INTO utilisateur (nomutilisateur, motdepasse) VALUES ('{utilisateur.NomUtilisateur}','{utilisateur.MotDePasse}');";
             try
             {
                 connectionString.Open();
-
                 var cmd = new NpgsqlCommand(req, connectionString);
                 cmd.ExecuteNonQuery();
-
                 connectionString.Close();
-
-
             }
             catch (Exception e)
             {

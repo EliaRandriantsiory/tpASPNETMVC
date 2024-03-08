@@ -7,12 +7,9 @@ using System.Web;
 
 namespace todoASPMVC.Models
 {
-    public class DCConnectionCUs
+    public class DbConnectionCU
     {
-        public static NpgsqlConnection connectionString =
-            new NpgsqlConnection(
-                ConfigurationManager.ConnectionStrings["TPASPNet"].ConnectionString);
-
+        public static NpgsqlConnection connectionString = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["TodoDbConnection"].ConnectionString);
 
 
 
@@ -30,10 +27,10 @@ namespace todoASPMVC.Models
 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 
@@ -50,10 +47,10 @@ namespace todoASPMVC.Models
 
                 connectionString.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 

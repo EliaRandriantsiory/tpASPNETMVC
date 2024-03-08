@@ -1,0 +1,57 @@
+﻿@model todoASPMVC.Models.Taches
+
+@{
+    ViewBag.Title = "DeleteTache";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DeleteTache</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Taches</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Statut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Statut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomTache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomTache)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomUtilisateur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomUtilisateur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTache)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTache)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
