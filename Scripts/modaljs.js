@@ -17,15 +17,22 @@ btnAjoutTache.onclick = () => {
     btnModal.value = "Ajouter tâche"
     headerModal.textContent = "Ajouter tâche"
     bodyModal.textContent = "Ajouter tâche"
-
 }
-btnModifier.onclick = () => {
-    btnModal.value = "Modifier tâche"
-    headerModal.textContent = "Modifier tâche"
-    bodyModal.textContent = "Modifier tâche"
-    console.log(idTacheModal.value)
+function modifierOnclick(e) {
+    var rowData = e.parentElement.parentElement.children;
+    modalLabel.innerHTML = "Modifier une Tache";
+    idInput.value = rowData[0].innerHTML.trim();
+    tacheInput.value = rowData[1].innerHTML.trim();
+    etatInput.checked = rowData[2].querySelector('input[type="checkbox"]').checked;
+    hiddenInput.className = "form-group utile mt-2";
+}
+//btnModifier.onclick = () => {
+//    btnModal.value = "Modifier tâche"
+//    headerModal.textContent = "Modifier tâche"
+//    bodyModal.textContent = "Modifier tâche"
+//    console.log(idTacheModal.value)
     
-}
+//}
 btnSupprimer.onclick = () => {
     btnModal.value = "Supprimer tâche"
     headerModal.textContent = "Supprimer tâche"
