@@ -16,6 +16,12 @@ namespace todoASPMVC.Models
         {
         }
 
+        public Taches(string nomUtilisateur, string nomTache)
+        {
+            _nomUtilisateur = nomUtilisateur;
+            _nomTache = nomTache;
+        }
+
         public Taches(string nomUtilisateur, string nomTache, bool statut)
         {
             _nomUtilisateur = nomUtilisateur;

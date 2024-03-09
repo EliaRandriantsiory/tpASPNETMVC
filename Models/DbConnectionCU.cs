@@ -47,10 +47,10 @@ namespace todoASPMVC.Models
 
                 connectionString.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 
