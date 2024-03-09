@@ -199,9 +199,12 @@ C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.dll
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.dll.config
 >>>>>>> tsiory
+=======
+>>>>>>> fara
 C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.pdb
 C:\Users\inclu\source\tpASPNETMVC\bin\roslyn\csc.exe

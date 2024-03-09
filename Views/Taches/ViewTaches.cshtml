@@ -76,7 +76,7 @@
 
     @foreach (var item in Model)
     {
-        <tr>
+        <tr name="ligneTable">
             <td>
                 @Html.DisplayFor(modelItem => item.NomUtilisateur)
             </td>
@@ -89,13 +89,13 @@
             <td id="idTache" >
                 @Html.DisplayFor(modelItem => item.IdTache)
             </td>
-            <td>
-                <button type="button" id="btnModifier" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <td >
+                <button type="button" name="btnModifier" class="btn btnModifier" >
                     Modifier
                 </button>
-                <button type="button" id="btnSupprimer" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Supprimer
-                </button>
+                @*<button type="button" id="btnSupprimer" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Supprimer
+        </button>*@
 
 
             </td>
