@@ -201,9 +201,6 @@ C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.AssemblyReference.
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.dll
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
-<<<<<<< HEAD
-=======
-C:\Users\inclu\source\tpASPNETMVC\bin\todoASPMVC.dll.config
 >>>>>>> tsiory
 >>>>>>> fara
 >>>>>>> dev
@@ -259,15 +256,10 @@ C:\Users\inclu\source\tpASPNETMVC\bin\roslyn\vbc.rsp
 C:\Users\inclu\source\tpASPNETMVC\bin\roslyn\VBCSCompiler.exe
 C:\Users\inclu\source\tpASPNETMVC\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\inclu\source\tpASPNETMVC\bin\Antlr3.Runtime.dll
-<<<<<<< HEAD
 C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\Newtonsoft.Json.dll
-=======
 C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\inclu\source\tpASPNETMVC\bin\Newtonsoft.Json.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\Npgsql.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Buffers.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Memory.dll
@@ -277,7 +269,6 @@ C:\Users\inclu\source\tpASPNETMVC\bin\System.Text.Encodings.Web.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Text.Json.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Threading.Tasks.Extensions.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.ValueTuple.dll
->>>>>>> dev
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Helpers.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Mvc.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Optimization.dll
@@ -286,8 +277,6 @@ C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.WebPages.Deployment.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.WebPages.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.WebPages.Razor.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\WebGrease.dll
-<<<<<<< HEAD
-=======
 C:\Users\inclu\source\tpASPNETMVC\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\Npgsql.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Buffers.xml
@@ -298,7 +287,6 @@ C:\Users\inclu\source\tpASPNETMVC\bin\System.Text.Encodings.Web.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Text.Json.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.ValueTuple.xml
->>>>>>> dev
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Helpers.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Mvc.xml
 C:\Users\inclu\source\tpASPNETMVC\bin\System.Web.Optimization.xml
@@ -316,13 +304,6 @@ C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.Razor.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.Razor.resources.dll
-<<<<<<< HEAD
-C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.AssemblyReference.cache
-C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.CoreCompileInputs.cache
-C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.Up2Date
-C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.dll
-C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.pdb
-=======
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.Up2Date
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\bin\todoASPMVC.dll
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\bin\todoASPMVC.pdb
@@ -534,5 +515,3 @@ C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\obj\Debug\todoASPMVC.csproj.Core
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\obj\Debug\todoASPMVC.csproj.CopyComplete
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\obj\Debug\todoASPMVC.dll
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\obj\Debug\todoASPMVC.pdb
->>>>>>> dev
->>>>>>> dev
