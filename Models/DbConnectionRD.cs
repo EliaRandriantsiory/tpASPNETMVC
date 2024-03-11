@@ -50,7 +50,6 @@ namespace todoASPMVC.Models
             }
             catch (Exception e)
             {
-
                 throw e;
             }
         }

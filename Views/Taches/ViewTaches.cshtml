@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ViewTaches</h2>
+<h2>Liste Tâches</h2>
 
 <p>
     <button type="button" id="btnajoutTache" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Tâche</button>
@@ -60,17 +60,18 @@
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NomUtilisateur)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.NomTache)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Statut)
         </th>
-        <th >
+        <th hidden>
             @Html.DisplayNameFor(model => model.IdTache)
+        </th>
+        <th hidden>
+            @Html.DisplayNameFor(model => model.NomUtilisateur)
         </th>
         <th></th>
     </tr>
@@ -78,17 +79,18 @@
     @foreach (var item in Model)
     {
         <tr name="ligneTable">
+
             <td>
-                @Html.DisplayFor(modelItem => item.NomUtilisateur)
-            </td>
-            <td >
                 @Html.DisplayFor(modelItem => item.NomTache)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Statut)
             </td>
-            <td id="idTache" >
+            <td id="idTache" hidden>
                 @Html.DisplayFor(modelItem => item.IdTache)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.NomUtilisateur)
             </td>
             <td>
                 <button type="button" name="btnModifier" class="btn btnModifier" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -98,8 +100,8 @@
                     Supprimer
                 </button>
                 @*<button type="button" id="btnSupprimer" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Supprimer
-        </button>*@
+                Supprimer
+            </button>*@
 
 
             </td>

@@ -26,7 +26,7 @@ namespace todoASPMVC.Controllers
 
                 //listTache = listTache.Where(obj => obj.IdTache == 1).ToList();
 
-                return View(listTache);
+                return View(DbConnectionRD.retrouverTaches(currentUser));
 
             }
             else

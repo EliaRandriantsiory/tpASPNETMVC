@@ -26,10 +26,10 @@ const currentUser = document.querySelector("#currentUser")
 function statestatusTacheModal() {
     if (statusTacheModal.checked == true) {
         statusTacheModal.value = "true"
-        labelStatusTache.innerHTML = "Terminer"
+        labelStatusTache.innerHTML = "Terminé"
     } else {
         statusTacheModal.value = "false"
-        labelStatusTache.innerHTML = "Non Terminer"
+        labelStatusTache.innerHTML = "Non Terminé"
     }
 }
 
@@ -55,7 +55,7 @@ btnAjoutTache.onclick = () => {
     btnModal.value = "Ajouter tâche"
     headerModal.textContent = "Ajouter tâche"
     bodyModal.textContent = "Ajouter tâche"
-    inputTextnomtache.value = "rakoto"
+    //inputTextnomtache.value = "rakoto"
     divStatusTache.hidden = true;
     ajoutModifier.hidden = false
     supprTache.hidden = true
@@ -65,8 +65,8 @@ function supprimerOnclick(e) {
     var rowData = e.parentElement.parentElement.children;
     ajoutModifier.hidden = true
     supprTache.hidden = false
-    labelSuppr.innerHTML = rowData[1].innerHTML.trim()
-    idTacheModal.value = rowData[3].innerHTML
+    labelSuppr.innerHTML = rowData[0].innerHTML.trim()
+    idTacheModal.value = rowData[2].innerHTML
     changeModalAction("Supprimer tâche")
 }
 function modifierOnclick(e) {
@@ -74,8 +74,8 @@ function modifierOnclick(e) {
     divStatusTache.hidden = false;
     ajoutModifier.hidden = false
     supprTache.hidden = true
-    var statustache = rowData[2].querySelector('input[type="checkbox"]').checked
-    inputTextnomtache.value = rowData[1].innerHTML.trim()
+    var statustache = rowData[1].querySelector('input[type="checkbox"]').checked
+    inputTextnomtache.value = rowData[0].innerHTML.trim()
     statestatusTacheModal()
     //statustache == true ? statusTacheModal.checked = true : statusTacheModal.checked = false
     //statustache == true ? statusTacheModal.value = "true" : statusTacheModal.value = "false"
@@ -87,7 +87,7 @@ function modifierOnclick(e) {
         statusTacheModal.value = "false"
     }
     //statustache == true ? statusTache.checked = true : statusTache.checked = false
-    idTacheModal.value = rowData[3].innerHTML
+    idTacheModal.value = rowData[2].innerHTML
 
     console.log(inputTextnomtache.value + idTacheModal.value + statustache)
     changeModalAction("Modifier tâche")
