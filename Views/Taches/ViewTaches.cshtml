@@ -1,0 +1,114 @@
+﻿@model IEnumerable<todoASPMVC.Models.Taches>
+
+@{
+    ViewBag.Title = "ViewTaches";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste Tâches</h2>
+
+<p>
+    <button type="button" id="btnajoutTache" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Tâche</button>
+</p>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm("ActionPost","Taches" , FormMethod.Post))
+            {
+                
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">AJOUT TÂCHE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @Html.AntiForgeryToken()
+                    <input hidden type="text" name="inputTextIdTache" id="inputTextIdTache" />
+                    <div id="AjoutModifier">
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label id="modalBodyTache">Ajout tache</label>
+                                <input type="text" id="inputTextnomtache" name="inputTextnomtache" style="width:30vw;">
+                                <div id="divStatusTache">
+                                    <input class="form-check-input" type="checkbox" name="checkStatusTache1" id="checkStatusTache1">
+                                    <label id="labelStatusTache"></label>
+                                </div>
+
+                            </div>
+                            <div class="form-group">                      </div>
+                        </div>
+                    </div>
+                    <div id="SupprTache">
+                        <label>Voulez-vous vraiment supprimer la tâche: </label><label id="confSuppr"></label><br/>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" id="btnModal" name="btnValidate"  class="btn btn-default" />
+                        </div>
+
+                    </div>
+                </div>
+                    }
+
+                </div>
+            </div>
+</div>
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.NomTache)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Statut)
+        </th>
+        <th hidden>
+            @Html.DisplayNameFor(model => model.IdTache)
+        </th>
+        <th hidden>
+            @Html.DisplayNameFor(model => model.NomUtilisateur)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr name="ligneTable">
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NomTache)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Statut)
+            </td>
+            <td id="idTache" hidden>
+                @Html.DisplayFor(modelItem => item.IdTache)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.NomUtilisateur)
+            </td>
+            <td>
+                <button type="button" name="btnModifier" class="btn btnModifier" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Modifier
+                </button>
+                <button type="button" name="btnSupprimer" class="btn btnSupprimer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Supprimer
+                </button>
+                @*<button type="button" id="btnSupprimer" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Supprimer
+            </button>*@
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+@section Scripts {
+    @Scripts.Render("~/Scripts/modaljs.js")
+}

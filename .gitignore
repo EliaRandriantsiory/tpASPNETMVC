@@ -2,10 +2,31 @@
 # Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/todoASPMVC/config/applicationhost.config
-/.vs/tpASPNETMVC/v17
-/.vs/todoASPMVC/FileContentIndex/06316c06-d43f-446c-ae2f-fc706a360fbb.vsidx
-*.json
-/.vs/todoASPMVC/FileContentIndex/e325b70c-12ca-4bdd-8bb1-4fc68e62fc22.vsidx
-/.vs/tpASPNETMVC1/v17/.wsuo
+/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll
+/bin/roslyn/Microsoft.CodeAnalysis.dll
+/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll
+/bin/roslyn/System.Collections.Immutable.dll
+/bin/roslyn/System.IO.FileSystem.dll
+/bin/roslyn/System.IO.FileSystem.Primitives.dll
+/bin/roslyn/System.Reflection.Metadata.dll
+/bin/roslyn/System.Security.Cryptography.Primitives.dll
+/bin/roslyn/System.ValueTuple.dll
+/bin/roslyn/VBCSCompiler.exe
+/.vs/todoASPMVC/config
+/.vs
+/bin
+/.vs/todoASPMVC/FileContentIndex
+/Views/Login
+/obj/Debug/
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/obj/Debug/todoASPMVC.csproj.FileListAbsolute.txt
+/obj/Debug/todoASPMVC.dll
+/obj/Debug/todoASPMVC.csproj.AssemblyReference.cache
+/obj/Debug/todoASPMVC.csproj.CoreCompileInputs.cache
+/.gitignore
+Web.config
+/.vs/tpASPNETMVC1/v17/DocumentLayout.json
+/obj/Debug/todoASPMVC.csproj.AssemblyReference.cache
+>>>>>>> fara
 /obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
