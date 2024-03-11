@@ -24,6 +24,7 @@ namespace todoASPMVC.Controllers
         [HttpPost]
         public ActionResult Login(Utilisateur utilisateur)
         {
+            utilisateur.MotDePasse = Request.Form["motDePasseLogin"];
             if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
                 Session["nomUtilisateur"] = utilisateur.NomUtilisateur;
