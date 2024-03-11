@@ -22,28 +22,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
                     @Html.AntiForgeryToken()
                     <input hidden type="text" name="inputTextIdTache" id="inputTextIdTache" />
-                    <div class="form-horizontal">
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            <label id="modalBodyTache">Ajout tache</label>
-                            <input type="text" id="inputTextnomtache" name="inputTextnomtache" style="width:30vw;">
-                            <div id="divStatusTache">
-                                    <input class="form-check-input" type="checkbox" name="checkStatusTache1" id="checkStatusTache1" >
-                                <label> Status tâche</label>
-                            </div>
+                    <div id="AjoutModifier">
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label id="modalBodyTache">Ajout tache</label>
+                                <input type="text" id="inputTextnomtache" name="inputTextnomtache" style="width:30vw;">
+                                <div id="divStatusTache">
+                                    <input class="form-check-input" type="checkbox" name="checkStatusTache1" id="checkStatusTache1">
+                                    <label id="labelStatusTache"></label>
+                                </div>
 
+                            </div>
+                            <div class="form-group">                      </div>
                         </div>
-                        <div class="form-group">                      </div>
                     </div>
+                    <div id="SupprTache">
+                        <label>Voulez-vous vraiment supprimer la tâche: </label><label id="confSuppr"></label><br/>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <input type="submit" id="btnModal" name="btnValidate"  class="btn btn-default" />
                         </div>
+
                     </div>
                 </div>
                     }
@@ -84,9 +90,12 @@
             <td id="idTache" >
                 @Html.DisplayFor(modelItem => item.IdTache)
             </td>
-            <td >
-                <button type="button" name="btnModifier" class="btn btnModifier" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            <td>
+                <button type="button" name="btnModifier" class="btn btnModifier" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Modifier
+                </button>
+                <button type="button" name="btnSupprimer" class="btn btnSupprimer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Supprimer
                 </button>
                 @*<button type="button" id="btnSupprimer" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Supprimer

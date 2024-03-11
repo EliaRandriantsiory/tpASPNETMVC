@@ -6,41 +6,77 @@ const bodyModal = document.querySelector("#modalBodyTache")
 const idTacheModal = document.querySelector("#inputTextIdTache")
 const inputTextnomtache = document.querySelector("#inputTextnomtache")
 const statusTacheModal = document.getElementById("checkStatusTache1");
-const btnModifier = document.querySelectorAll("tr td button")
-const btnSupprimer = document.querySelector("#btnSupprimer")
+const btnActionPost = document.querySelectorAll("tr td button")
+const btnModifier = document.querySelectorAll("tr td button.btnModifier")
+const btnSupprimer = document.querySelectorAll("tr td button.btnSupprimer")
+
+const labelSuppr = document.querySelector("#confSuppr")
 
 const divStatusTache = document.getElementById("divStatusTache")
 
+const ajoutModifier = document.querySelector("#AjoutModifier")
+const supprTache = document.querySelector("#SupprTache")
+const labelStatusTache = document.querySelector('#labelStatusTache')
 
 const ligneTable = document.getElementsByName("ligneTable")
 
 const currentUser = document.querySelector("#currentUser")
 
-
-statusTacheModal.onchange = () => {
-    statusTacheModal.checked == true ? statusTacheModal.value = "true" : statusTacheModal.value = "false"
-    console.log("changed" + statusTacheModal.value)
+//statestatusTacheModal()
+function statestatusTacheModal() {
+    if (statusTacheModal.checked == true) {
+        statusTacheModal.value = "true"
+        labelStatusTache.innerHTML = "Terminer"
+    } else {
+        statusTacheModal.value = "false"
+        labelStatusTache.innerHTML = "Non Terminer"
+    }
 }
 
+statusTacheModal.onchange = () => {
+    //statusTacheModal.checked == true ? statusTacheModal.value = "true" : statusTacheModal.value = "false"
+    //console.log("changed" + statusTacheModal.value)
+    statestatusTacheModal()
+}
 
-//console.log(btnModifier.length<)
 for (let i = 0; i < btnModifier.length; i++) {
     btnModifier[i].onclick = () => {
     modifierOnclick(btnModifier[i])
     }
 }
+
+for (let i = 0; i < btnSupprimer.length; i++) {
+    btnSupprimer[i].onclick = () => {
+        supprimerOnclick(btnSupprimer[i])
+    }
+}
+
 btnAjoutTache.onclick = () => {
     btnModal.value = "Ajouter tâche"
     headerModal.textContent = "Ajouter tâche"
     bodyModal.textContent = "Ajouter tâche"
     inputTextnomtache.value = "rakoto"
     divStatusTache.hidden = true;
+    ajoutModifier.hidden = false
+    supprTache.hidden = true
+}
+
+function supprimerOnclick(e) {
+    var rowData = e.parentElement.parentElement.children;
+    ajoutModifier.hidden = true
+    supprTache.hidden = false
+    labelSuppr.innerHTML = rowData[1].innerHTML.trim()
+    idTacheModal.value = rowData[3].innerHTML
+    changeModalAction("Supprimer tâche")
 }
 function modifierOnclick(e) {
     var rowData = e.parentElement.parentElement.children;
     divStatusTache.hidden = false;
+    ajoutModifier.hidden = false
+    supprTache.hidden = true
     var statustache = rowData[2].querySelector('input[type="checkbox"]').checked
     inputTextnomtache.value = rowData[1].innerHTML.trim()
+    statestatusTacheModal()
     //statustache == true ? statusTacheModal.checked = true : statusTacheModal.checked = false
     //statustache == true ? statusTacheModal.value = "true" : statusTacheModal.value = "false"
     if (statustache == true) {

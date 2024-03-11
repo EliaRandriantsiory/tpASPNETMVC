@@ -21,10 +21,12 @@ namespace todoASPMVC.Controllers
         {
             if (Session["nomUtilisateur"] != null)
             {
-                var listTache = new List<Taches>();
                 var currentUser = Session["nomUtilisateur"].ToString();
+                List<Taches> listTache = DbConnectionRD.retrouverTaches(currentUser);
 
-                return View(DbConnectionRD.retrouverTaches(currentUser));
+                //listTache = listTache.Where(obj => obj.IdTache == 1).ToList();
+
+                return View(listTache);
 
             }
             else
@@ -57,6 +59,9 @@ namespace todoASPMVC.Controllers
                 //return Content(tache.IdTache.ToString() + (tache.Statut == true ? "true" : "false") ) ;
                 //return Content($"{idTache},{type},{nomTache},{statusTahe},{Session["nomUtilisateur"].ToString()}");
                 //return RedirectToRoute("Dashboard");
+            }else if(type == "Supprimer tâche") {
+                DbConnectionRD.SupprimerTache(int.Parse(idTache));
+                return RedirectToRoute("Dashboard");
             }
 
             return RedirectToRoute("Dashboard");
