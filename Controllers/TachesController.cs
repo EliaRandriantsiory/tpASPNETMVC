@@ -23,15 +23,9 @@ namespace todoASPMVC.Controllers
             {
                 var listTache = new List<Taches>();
                 var currentUser = Session["nomUtilisateur"].ToString();
-                //var tache1 = new Taches(1, currentUser, "manger", false);
-                //var tache2 = new Taches(2, currentUser, "étudier", false);
-                //listTache.Add(tache1);
-                //listTache.Add(tache2);
 
-                //DbConnectionRD.retrouverTaches(currentUser);
                 return View(DbConnectionRD.retrouverTaches(currentUser));
 
-                //return View(new List<Taches>());
             }
             else
             {
@@ -42,21 +36,30 @@ namespace todoASPMVC.Controllers
 
 
 
-        [HttpPost]  
-        public ActionResult ActionPost()
+        [HttpPost]
+        public ActionResult ActionPost(Taches taches)
         {
             var type = Request.Form["btnValidate"];
             var nomTache = Request.Form["inputTextnomtache"];
             var idTache = Request.Form["inputTextIdTache"];
+            var statusTahe = Request.Form["checkStatusTache1"];
 
             if (type == "Ajouter tâche")
             {
                 var tache = new Taches(Session["nomUtilisateur"].ToString(), nomTache);
                 DbConnectionCU.CreationTache(tache);
                 return RedirectToRoute("Dashboard");
+            }else if (type == "Modifier tâche")
+            {
+                var tache = new Taches(int.Parse(idTache),Session["nomUtilisateur"].ToString(), nomTache, statusTahe=="true"? true:false);
+                DbConnectionCU.UpdateTache(tache);
+                return RedirectToRoute("Dashboard");
+                //return Content(tache.IdTache.ToString() + (tache.Statut == true ? "true" : "false") ) ;
+                //return Content($"{idTache},{type},{nomTache},{statusTahe},{Session["nomUtilisateur"].ToString()}");
+                //return RedirectToRoute("Dashboard");
             }
 
-            return Content($"{idTache},{type},{nomTache},{Session["nomUtilisateur"].ToString()}");
+            return RedirectToRoute("Dashboard");
         }
         public ActionResult CreateTache(Taches tache)
         {

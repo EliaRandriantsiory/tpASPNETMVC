@@ -304,7 +304,6 @@ C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\bin\fr\System.Web.WebPages.Razor.resources.dll
 C:\Users\inclu\source\tpASPNETMVC\obj\Debug\todoASPMVC.csproj.Up2Date
-<<<<<<< HEAD
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\bin\todoASPMVC.dll
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\bin\todoASPMVC.pdb
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\bin\roslyn\csc.exe
@@ -410,7 +409,6 @@ C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\obj\Debug\todoASPMVC.csproj.
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\obj\Debug\todoASPMVC.csproj.CopyComplete
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\obj\Debug\todoASPMVC.dll
 C:\Users\Inclusiv Academy\Source\Repos\tpASPNETMVC5\obj\Debug\todoASPMVC.pdb
-=======
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\bin\todoASPMVC.dll
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\bin\todoASPMVC.pdb
 C:\Users\Inclusive-PC\Source\Repos\tpASPNETMVC2\bin\roslyn\csc.exe

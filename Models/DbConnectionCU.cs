@@ -10,9 +10,6 @@ namespace todoASPMVC.Models
     public class DbConnectionCU
     {
         public static NpgsqlConnection connectionString = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["TodoDbConnection"].ConnectionString);
-
-
-
         public static void CreationTache(Taches tache)
         {
             var req = $"INSERT INTO public.\"taches\"(nomutilisateur, nomtache, statut)" +
@@ -36,7 +33,7 @@ namespace todoASPMVC.Models
 
         public static void UpdateTache(Taches tache)
         {
-            var req = $"UPDATE public.taches SET nomutilisateur = '{tache.NomUtilisateur}', nomtache = '{tache.NomTache}', statut = '{tache.Statut}' WHERE idtache = {tache.IdTache}";
+            var req = $"UPDATE public.taches SET nomtache = '{tache.NomTache}', statut = '{tache.Statut}' WHERE idtache = {tache.IdTache}";
 
             try
             {
