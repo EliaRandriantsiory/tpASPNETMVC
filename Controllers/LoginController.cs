@@ -24,23 +24,17 @@ namespace todoASPMVC.Controllers
         [HttpPost]
         public ActionResult Login(Utilisateur utilisateur)
         {
-            
-            if (Request.Form["motDePasseLogin"] == Request.Form["repmotDePasseLogin"])
+            if (DBConnection.AuthentificationUtilisateur(utilisateur))
             {
-                utilisateur.MotDePasse = Request.Form["motDePasseLogin"];
-                return Content(Request.Form["motDePasseLogin"]);
-                //if (DBConnection.AuthentificationUtilisateur(utilisateur))
-                //{
-                //    Session["nomUtilisateur"] = utilisateur.NomUtilisateur;
-                //    return RedirectToRoute("Dashboard");
-                //    //return Content(utilisateur.NomUtilisateur);
-                //}
-                //else
-                //{
-                //    return View();
-                //}
+                Session["nomUtilisateur"] = utilisateur.NomUtilisateur;
+                return RedirectToRoute("Dashboard");
+                //return Content(utilisateur.NomUtilisateur);
             }
-            return View();
+            else
+            {
+                return View();
+            }
+
 
             //return Content($"utilisateur:{utilisateur.NomUtilisateur}\nmot de passe{utilisateur.MotDePasse}");
 
